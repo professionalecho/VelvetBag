@@ -54,7 +54,7 @@ namespace DiscordTest
 
             foreach (IGuildUser user in users)
             {
-                if (user.RoleIds.Contains(inPlayRole.Id) && user.Status == UserStatus.Online)
+                if (user.RoleIds.Contains(inPlayRole.Id))
                 {
                     Player newplayer = new Player(user, this, null);
                     _players.Add(user, newplayer);
@@ -264,6 +264,7 @@ namespace DiscordTest
                 toAdd = u[random.Next(u.Count)];
 
                 rolesInPlay.Remove(toRemove);
+                allRoles.Add(toRemove);
                 rolesInPlay.Add(toAdd);
                 allRoles.Remove(toAdd);
             }
@@ -279,6 +280,7 @@ namespace DiscordTest
                 toAdd = u[random.Next(u.Count)];
 
                 rolesInPlay.Remove(toRemove);
+                allRoles.Add(toRemove);
                 rolesInPlay.Add(toAdd);
                 allRoles.Remove(toAdd);
             }

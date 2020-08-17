@@ -72,7 +72,7 @@ namespace DiscordTest
                 {
                     try
                     {
-                        // await p.Value.User.SendMessageAsync($"You are the {p.Value.KnownRole.Name}!");
+                        await p.Value.User.SendMessageAsync($"You are the {p.Value.KnownRole.Name}!");
                     }
                     catch (HttpException)
                     {
