@@ -54,7 +54,7 @@ namespace DiscordTest
 
             foreach (IGuildUser user in users)
             {
-                if (user.RoleIds.Contains(inPlayRole.Id))
+                if (user.RoleIds.Contains(inPlayRole.Id) && user.Status == UserStatus.Online)
                 {
                     Player newplayer = new Player(user, this, null);
                     _players.Add(user, newplayer);
@@ -63,15 +63,14 @@ namespace DiscordTest
 
             if (_players.Count < 5)
             {
-                // removed for testing
-                // throw new InvalidDataException("Too few players!");
+                throw new InvalidDataException("Too few players!");
             }
             if (_players.Count > 15)
             {
                 throw new InvalidDataException($"Too many players! Please ask {15 - _players.Count} to remove the {inPlayRole.Name} role until setup is done; they can then enter as travelers.");
             }
 
-            demon.TotalCount = 0;
+            demon.TotalCount = 1;
 
             if (_players.Count > 14)
             {
@@ -83,11 +82,6 @@ namespace DiscordTest
             {
                 switch (_players.Count)
                 {
-                    case 2:
-                        townsfolk.TotalCount = 3;
-                        outsider.TotalCount = 0;
-                        minion.TotalCount = 1;
-                        break;
                     case 5:
                         townsfolk.TotalCount = 3;
                         outsider.TotalCount = 0;

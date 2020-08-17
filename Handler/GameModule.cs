@@ -25,7 +25,8 @@ namespace DiscordTest
         public async Task Start(string script)
         {
             IGuildUser user = Context.User as IGuildUser;
-            if (user.Nickname.StartsWith("!ST")) // Checks that the person typing the command is a Storyteller.
+            bool isST = user.Nickname.StartsWith("!ST");
+            if (isST) // Checks that the person typing the command is a Storyteller.
             {
                 string st = Context.User.Username + "#" + Context.User.Discriminator;
                 if (_gameMapping.TryAdd(st, new Game(Context.User, script.ToLower()))) // Add a new game to the list of games, removed when DMs are sent.
