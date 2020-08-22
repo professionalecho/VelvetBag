@@ -1,5 +1,10 @@
 # VelvetBag
-A Discord bot that generates games of Blood on the Clocktower.
+A Discord bot that handles the setup of games of Blood on the Clocktower. VelvetBag allows Storytellers to specify who's in the game, which script you'd like to play, and (optionally) any roles you would definitely like to play with. It then randomly generates and assigns roles to every player, and (once the Storyteller has seen and approved the list) sends a private message to every player informing them of their role.
+
+## Installation
+You'll need to host the bot either locally or on a server, then bring it into your server. See the [Discord.Net introductory guides](https://discord.foxbot.me/stable/guides/getting_started/first-bot.html) for more information.
+
+Just before you run VelvetBag, make sure each player has set their privacy settings to allow direct messages from server members, otherwise VelvetBag won't be able to inform them of their role.
 
 ## How It Works
 Once installed and running, you can use three commands in succession to set up a game of Blood on the Clocktower with your discord. The three steps are: **!start**, **!set**, and **!send**.
