@@ -21,7 +21,7 @@ When you use !start you must specify a script code to indicate which script of t
 | Sects & Violets 	| sav 	|
 
 ### !Set [roles]
-Storyteller, once you have started a game, you will receive a DM from VelvetBag inviting you to set the roles for the game. These are selected and assigned at random, but you can include any number of mandatory roles following the command, such as **!set baron** or **!set vortox "no dashii"**. Capitalisation doesn't matter, but roles with spaces in the name need to be surrounded by quotation marks.
+Storyteller, once you have started a game, you will receive a DM from VelvetBag inviting you to set the roles for the game. These are selected and assigned at random, but you can include any number of mandatory roles following the command, such as **!set baron** or **!set clockmaker "no dashii"**. Capitalisation doesn't matter, but roles with spaces in the name need to be surrounded by quotation marks.
 
 You use **!send** in the DM channel with VelvetBag, so the players don't get a hint of what will be in the game!
 
